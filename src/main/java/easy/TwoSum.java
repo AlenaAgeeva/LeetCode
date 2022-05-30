@@ -16,7 +16,7 @@ public class TwoSum {
         int[] result = null;
         loop:
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length - 1; j++) {
+            for (int j = i + 1; j <= nums.length - 1; j++) {
                 if (nums[i] + nums[j] == target) {
                     result = new int[]{i, j};
                     break loop;
@@ -27,7 +27,7 @@ public class TwoSum {
     }
 
     public static void main(String[] args) {
-        TwoSum two = new TwoSum();
-        System.out.println(Arrays.toString(two.twoSum(new int[]{1, 3, 10, 23, 54, 77, 3, 4, 5}, 7)));
+        System.out.println(Arrays.toString(new TwoSum()
+                .twoSum(new int[]{1, 3, 10, 23, 54, 77, 3, 4, 5}, 9)));
     }
 }
