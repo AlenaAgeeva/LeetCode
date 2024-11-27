@@ -1,4 +1,4 @@
-package easy;
+package easy.list;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -15,10 +15,5 @@ public class MergeTwoLists {
         return list.stream()
                 .sorted()
                 .collect(Collectors.toList());
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new MergeTwoLists()
-                .mergeTwoLists(List.of(7, 1, 4, 5), List.of(0, -10, -8, 45, 3)));
     }
 }
