@@ -2,6 +2,13 @@ package easy.sort;
 
 import java.util.Arrays;
 
+/**
+ * Алгоритм сортировки выбором (Selection sort)` работает следующим образом:
+ * Находим минимальный элемент в массиве.
+ * Меняем его местами с первым элементом.
+ * Повторяем шаги 1 и 2 для оставшейся части массива, начиная со второго элемента и до конца.
+ */
+
 public class SelectionSort {
     public static int[] selectionSort(int[] arr) {
         int n = arr.length;
@@ -18,6 +25,6 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(BubleSorting.bubbleSort(new int[]{2, 7, 4, 5, 9, 0, 3})));
+        System.out.println(Arrays.toString(BubleSort.bubbleSort(new int[]{2, 7, 4, 5, 9, 0, 3})));
     }
 }
