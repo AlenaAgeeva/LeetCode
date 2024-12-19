@@ -6,6 +6,9 @@
  * @author Alena Ageeva
  */
 const isPalindrome = function (x) {
+    if (x == null || x == undefined) {
+        throw new Error("Null or undefined value");
+    }
     if (typeof (x) == "number") {
         return x == x.toString().split('').reverse().join('');
     } else return "Not a number";

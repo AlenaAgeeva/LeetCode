@@ -10,4 +10,10 @@ describe("Array permutation", () => {
         const expected = [0, 0, 0, 0];
         expect(buildArray(nums)).toEqual(expected);
     });
+    test("handles an null value", () => {
+        expect(() => buildArray(null)).toThrow("Null or undefined value")
+    });
+    test("handles an undefined value", () => {
+        expect(() => buildArray(undefined)).toThrow("Null or undefined value")
+    });
 })

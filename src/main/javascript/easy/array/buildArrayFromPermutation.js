@@ -6,6 +6,9 @@
  * A zero-based permutation nums is an array of distinct integers from 0 to nums.length - 1 (inclusive).
  */
 let buildArray = function (nums) {
+    if (nums == null || nums == undefined) {
+        throw new Error("Null or undefined value");
+    }
     let arr = [];
     for (let num of nums) {
         arr.push(nums[num])
