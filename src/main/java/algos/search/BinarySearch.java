@@ -1,4 +1,4 @@
-package algos;
+package algos.search;
 
 public class BinarySearch {
     public static int getCount(int[] arr, int num) {

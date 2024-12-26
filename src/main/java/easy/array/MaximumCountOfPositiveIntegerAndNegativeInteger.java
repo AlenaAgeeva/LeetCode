@@ -29,32 +29,31 @@ public class MaximumCountOfPositiveIntegerAndNegativeInteger {
         if (nums[0] > 0 || nums[nums.length - 1] < 0) {
             return nums.length;
         }
-        int left = 0;
-        int right = length - 1;
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (nums[mid] < 0) {
-                left = mid + 1;
+        int startZero = 0;
+        int end = length - 1;
+        while (startZero <= end) {
+            int middle = startZero + (end - startZero) / 2;
+            if (nums[middle] < 0) {
+                startZero = middle + 1;
             } else {
-                right = mid - 1;
+                end = middle - 1;
             }
         }
-        int negCount = left;
-        int posCount = length - negCount;
-        int zeroCount = 0;
-        for (int i = left; i < length; i++) {
-            if (nums[i] == 0) {
-                zeroCount++;
+        int startPos = startZero;
+        int endZero = length - 1;
+        while (startPos <= endZero) {
+            int middle = startPos + (endZero - startPos) / 2;
+            if (nums[middle] == 0) {
+                startPos = middle + 1;
             } else {
-                break;
+                endZero = middle - 1;
             }
         }
-        return Math.max(negCount, posCount - zeroCount);
+        return Math.max(startZero, length - startPos);
     }
 
     public static void main(String[] args) {
         System.out.println(MaximumCountOfPositiveIntegerAndNegativeInteger
-                .maximumCount(new int[]{-2, -1, -1, -8, 0, 0, 0, 0, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14}));
+                .maximumCount(new int[]{-3, -2, -1, 0, 0, 1, 2}));
     }
-
 }
