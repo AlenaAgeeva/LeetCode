@@ -1,19 +1,19 @@
 package algos.sorting;
 
 public class QuickSort {
-    public void quickSort(int[] arr) {
-        quickSort(arr, 0, arr.length - 1);
+    public static void quickSort(int[] arr) {
+        sort(arr, 0, arr.length - 1);
     }
 
-    private void quickSort(int[] arr, int low, int high) {
+    private static void sort(int[] arr, int low, int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
-            quickSort(arr, low, pi - 1);
-            quickSort(arr, pi + 1, high);
+            sort(arr, low, pi - 1);
+            sort(arr, pi + 1, high);
         }
     }
 
-    private int partition(int[] arr, int low, int high) {
+    private static int partition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = (low - 1); // Index of smaller element
         for (int j = low; j < high; j++) {
@@ -28,5 +28,10 @@ public class QuickSort {
         arr[i + 1] = arr[high];
         arr[high] = temp;
         return i + 1;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{2, 56, 1, 3, /*-12, 0, 22, 8907, 76, 3, -10, 65, -854, 5, 23*/};
+        QuickSort.quickSort(arr);
     }
 }
