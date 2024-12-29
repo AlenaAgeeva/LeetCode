@@ -15,7 +15,7 @@ public class QuickSort {
 
     private static int partition(int[] arr, int low, int high) {
         int pivot = arr[high];
-        int i = (low - 1); // Index of smaller element
+        int i = (low - 1);
         for (int j = low; j < high; j++) {
             if (arr[j] < pivot) {
                 i++;
@@ -31,7 +31,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{2, 56, 1, 3, /*-12, 0, 22, 8907, 76, 3, -10, 65, -854, 5, 23*/};
+        int[] arr = new int[]{2, 56, 1, 3, -12, 0, 22, 8907, 76, 3, -10, 65, -854, 5, 23};
         QuickSort.quickSort(arr);
     }
 }

@@ -1,6 +1,5 @@
 package easy.array;
 
-import java.math.BigInteger;
 import java.util.Arrays;
 
 /**

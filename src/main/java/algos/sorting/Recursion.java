@@ -1,7 +1,5 @@
 package algos.sorting;
 
-import java.util.Arrays;
-
 public class Recursion {
     public static int recursion(int[] arr, int index) {
         if (index == arr.length - 1) {
