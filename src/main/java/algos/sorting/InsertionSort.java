@@ -1,7 +1,13 @@
 package algos.sorting;
 
+/**
+ * Insertion Sort is a simple and intuitive sorting algorithm that builds a sorted array (or list) one
+ * element at a time. It is much less efficient on large lists than more advanced algorithms like quicksort
+ * or mergesort. However, it has the advantage of being simple to implement and is efficient for small data
+ * sets or nearly sorted data.
+ */
 public class InsertionSort {
-    public void insertionSort(int[] arr) {
+    public static void insertionSort(int[] arr) {
         for (int i = 1; i < arr.length; ++i) {
             int key = arr[i];
             int j = i - 1;
@@ -11,5 +17,9 @@ public class InsertionSort {
             }
             arr[j + 1] = key;
         }
+    }
+    public static void main(String[] args) {
+        int[] arr = {2, 1, 6, 0};
+        InsertionSort.insertionSort(arr);
     }
 }

@@ -2,13 +2,10 @@ package easy.string;
 
 /**
  * Write a function to find the longest common prefix string amongst an array of strings.
- * <p>
  * If there is no common prefix, return an empty string "".
- * <p>
  * Example 1:
  * Input: strs = ["flower","flow","flight"]
  * Output: "fl"
- * <p>
  * Example 2:
  * Input: strs = ["dog","racecar","car"]
  * Output: ""
